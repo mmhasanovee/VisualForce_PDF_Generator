@@ -1,0 +1,20 @@
+<apex:page controller="AccountPDFInfo" applyHtmlTag="false" showHeader="false" renderAs="PDF">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>BillingStreet</th>
+            <th>BillingCity</th>
+            <th>BillingState</th>
+          
+        </tr>
+        <apex:repeat value="{!account}" var="acc">
+            <tr>
+                <td>{!acc.Name}</td>
+                <td>{!acc.BillingStreet}</td>
+                <td>{!acc.BillingCity}</td>
+                <td>{!acc.BillingState}</td>
+               
+            </tr>
+        </apex:repeat>
+    </table>
+</apex:page>
